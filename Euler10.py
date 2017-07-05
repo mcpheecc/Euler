@@ -5,10 +5,10 @@
 import math
 sieve = [True] * 2000000
 def isPrime(sieve, x):
-    for i in xrange(x+x, len(sieve), x):
+    for i in range(x+x, len(sieve), x):
         sieve[i] = False
 
-for x in xrange(2, int(math.sqrt(len(sieve))) + 1):
+for x in range(2, int(math.sqrt(len(sieve))) + 1):
     if sieve[x]: isPrime(sieve, x)
 
-print sum(i for i in xrange(2, len(sieve)) if sieve[i]) 
+print(sum(i for i in range(2, len(sieve)) if sieve[i]))
